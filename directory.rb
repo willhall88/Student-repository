@@ -45,7 +45,6 @@ puts students [16]
 puts students [17]
 puts students [18]
 puts students [19]
-puts students [20]
 
 # finally we print the total
 puts "Overall, we have #{student_count} great students"
