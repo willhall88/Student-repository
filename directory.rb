@@ -30,12 +30,13 @@ end
 
 def print(students)
 	x = 0
-	while x <= 19
+	until x == 19
+		
 		students.each_with_index do |student, index|
-	
-		puts " #{x} #{index+1} #{student[:name]} (#{student[:cohort]} cohort)"
-		x += 1
-	end
+			puts " #{x} #{index+1} #{student[:name]} (#{student[:cohort]} cohort)"
+			x += 1
+		end
+		puts x
 	end
 end
 
