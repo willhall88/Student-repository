@@ -1,26 +1,26 @@
 student_count = 20
 # Let's put all students into an array
 students = [
-"Daniel Le Dosquet - Bergquist",
-"Steve Musgrave",
-"Sroop Sunar",
-"Colin Marshall",
-"Josh Fail-Brown",
-"Louise Lai",
-"Robin Doble",
-"Alex Wong",
-"Scott Dimmock",
-"Muhanad Al-Rubaiee",
-"Shelley Hope",
-"Will Hall",
-"Oliver Delevingne",
-"Nico Saueressig",
-"Apostolis",
-"Stefania Cardenas",
-"Robert Leon",
-"Emma Williams",
-"Joey Wolf",
-"Julie Walker",
+	["Daniel Le Dosquet - Bergquist", :March],
+	["Steve Musgrave", :March],
+	["Sroop Sunar", :March],
+	["Colin Marshall", :March],
+	["Josh Fail-Brown", :March],
+	["Louise Lai", :March],
+	["Robin Doble", :March],
+	["Alex Wong", :March],
+	["Scott Dimmock", :March],
+	["Muhanad Al-Rubaiee", :March],
+	["Shelley Hope", :March],
+	["Will Hall", :March],
+	["Oliver Delevingne", :March],
+	["Nico Saueressig", :March],
+	["Apostolis", :March],
+	["Stefania Cardenas", :March],
+	["Robert Leon", :March],
+	["Emma Williams", :March],
+	["Joey Wolf", :March],
+	["Julie Walker", :March]
 ]
 
 def print_header
@@ -28,9 +28,9 @@ def print_header
 	puts "------------"
 end
 
-def print(names)
-	names.each do |name|
-	puts name
+def print(students)
+	students.each do |student|
+	puts "#{student[0]} (#{student[1]} cohort)"
 	end
 end
 
