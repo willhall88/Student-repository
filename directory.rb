@@ -29,15 +29,9 @@ def print_header
 end
 
 def print(students)
-	x = 0
-	until x == 19
-		
 		students.each_with_index do |student, index|
-			puts " #{x} #{index+1} #{student[:name]} (#{student[:cohort]} cohort)"
-			x += 1
+		puts "#{index+1} #{student[:name]} (#{student[:cohort]} cohort)"
 		end
-		puts x
-	end
 end
 
 def print_footer(names)
