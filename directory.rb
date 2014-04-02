@@ -24,7 +24,8 @@ students = [
 ]
 
 def print_header
-	puts "The students of my cohort at Makers Academy"
+	text = "The students of my cohort at Makers Academy"
+	puts text.center(100, " ")
 	puts "------------"
 end
 
