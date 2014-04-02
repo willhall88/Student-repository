@@ -29,7 +29,7 @@ def print_header
 	puts "------------"
 end
 
-def print(students)
+def printarray(students)
 		students.each_with_index do |student, index|
 		puts "#{index+1} #{student[:name]},  #{student[:gender]} (#{student[:cohort]} cohort)"
 		end
@@ -45,23 +45,29 @@ def input_students
 	# create an empty array
 	students = []
 	# get the first name
+	print "name please:    "
 	name = gets.chomp
+    print "cohort please:  "
+	cohort = gets.chomp
 	# while the name is not empty, repaeat this code
 	while !name.empty? do
 		# add the student hash to the array
-		students << {:name => name, :cohort => :March,}
-		puts "Now we have  #{students.length} students"
+		students << {:name => name, :cohort => cohort,}
 		# get anothe name from the user
+		print "name please:    "
 		name = gets.chomp
+    	print "cohort please:  "
+		cohort = gets.chomp
 	end
+	puts "Now we have  #{students.length} students"
 	# return the array of students
 	students
 end
 
 
 # nothing happens until we call the methods
-# students = input_students
+students = input_students
 print_header
-print(students)
+printarray(students)
 print_footer(students)
 
