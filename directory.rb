@@ -3,7 +3,7 @@ student_count = 20
 students = [
 {:name => "Daniel Le Dosquet - Bergquist", :cohort => :March, :gender => "male"},
 {:name => "Steve Musgrave", :cohort => :March, :gender => "male"},
-{:name => "Sroop Sunar", :cohort => :March, :gender => "male"},
+{:name => "Sroop Sunar", :cohort => :March, :gender => "female"},
 {:name => "Colin Marshall", :cohort => :March, :gender => "male"},
 {:name => "Josh Fail-Brown", :cohort => :March, :gender => "male"},
 {:name => "Louise Lai", :cohort => :March, :gender => "female"},
