@@ -35,36 +35,40 @@ def printarray(students)
  		end
  end
 
+def get_name(students)
+	puts "name please:"
+	name = gets.chomp
+	while name.empty? do
+		puts "now we have #{students.length} great students"
+		return name
+	end
+	name
+end
+
+def get_cohort
+	puts "cohort please"
+	cohort = gets.chomp
+	while cohort.empty? do
+		puts "Enter the cohort!"
+		cohort = gets.chomp
+	end
+	return cohort
+end
 def input_students
 	puts "Please enter the names of the students"
 	puts "To finish, just hit the return twice"
 	# create an empty array
 	students = []
 	# get the first name
-	puts "name please:"
-	name = gets.chomp
-	while name.empty? do
-		puts "we dont have any students :( "
-		return students
-	end
-	puts "cohort please"
-	cohort = gets.chomp
-
+	name = get_name(students)
+		while name.empty? do
+			return students
+		end	
 	while !name.empty? do 
+		cohort = get_cohort
 		students << {name: name, cohort: :March}
 		puts "Now we have #{students.length} students"
-		puts "name please:"
-		name = gets.chomp
-		while name.empty? do
-			puts "now we have #{students.length} students"
-			return students
-		end
-		puts "cohort please:"
-		cohort = gets.chomp
-		while cohort.empty? do
-			puts "Enter the cohort!"
-			cohort = gets.chomp
-		end
+		name = get_name(students)
 	end
 	students
 end
