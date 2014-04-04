@@ -30,7 +30,8 @@ def print_header
 end
 
 def printarray(students)
- 		students.each_with_index do |student, index|
+		sort_students = students.sort_by { |student| student[:cohort]}
+ 		sort_students.each_with_index do |student, index|
  		puts "#{index+1} #{student[:name]},  #{student[:gender]} (#{student[:cohort]} cohort)"
  		end
  end
@@ -54,6 +55,7 @@ def get_cohort
 	end
 	return cohort
 end
+
 def input_students
 	puts "Please enter the names of the students"
 	puts "To finish, just hit the return twice"
@@ -66,7 +68,7 @@ def input_students
 		end	
 	while !name.empty? do 
 		cohort = get_cohort
-		students << {name: name, cohort: :March}
+		students << {name: name, cohort: cohort}
 		puts "Now we have #{students.length} students"
 		name = get_name(students)
 	end
