@@ -43,9 +43,12 @@ def input_students
 	# get the first name
 	puts "name please:"
 	name = gets.chomp
+	while name.empty? do
+		puts "we dont have any students :( "
+		return students
+	end
 	puts "cohort please"
 	cohort = gets.chomp
-
 
 	while !name.empty? do 
 		students << {name: name, cohort: :March}
